@@ -1,10 +1,25 @@
+
 package metier.entities;
 
 import java.io.Serializable;
 
-//cette classe aussi appeler java bean
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity  
+@Table(name = "PRODUITS")
 public class Produit implements Serializable{
+	
+	@Id 
+	@Column (name="ID_PRODUIT")
+	@GeneratedValue (strategy=GenerationType.IDENTITY) 
+
 	private Long idProduit;
+	@Column (name="NOM_PRODUIT")
 	private String nomProduit;
 	private double prix;
 	
@@ -38,7 +53,5 @@ public class Produit implements Serializable{
 	public String toString() {
 		return "Produit [idProduit=" + idProduit + ", nomProduit=" + nomProduit + ", prix=" + prix + "]";
 	}
-	
-	
 	
 }
