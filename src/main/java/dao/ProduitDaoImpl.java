@@ -10,7 +10,7 @@ import metier.entities.Produit;
 import util.JPAutil;
 
 public class ProduitDaoImpl implements IProduitDao {
-	private EntityManager entityManager=JPAutil.getEntityManager("TP5_JEE_demo");
+	private EntityManager entityManager=JPAutil.getEntityManager("TP6_JEE_demo");
 
 	@Override
 	public Produit save(Produit p) {
